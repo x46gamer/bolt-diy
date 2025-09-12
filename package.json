@@ -12,8 +12,11 @@
   },
   "scripts": {
     "deploy": "npm run build && wrangler pages deploy",
-    "build": "remix vite:build",
+    "deploy:vercel": "vercel --prod",
+    "build": "VERCEL=1 remix vite:build",
+    "build:vercel": "remix vite:build --config vite.vercel.config.ts",
     "dev": "node pre-start.cjs  && remix vite:dev",
+    "dev:vercel": "vercel dev",
     "test": "vitest --run",
     "test:watch": "vitest",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint app",
@@ -201,6 +204,7 @@
     "vite-plugin-copy": "^0.1.6",
     "vite-plugin-optimize-css-modules": "^1.1.0",
     "vite-tsconfig-paths": "^4.3.2",
+    "vercel": "^38.0.0",
     "vitest": "^2.1.7",
     "wrangler": "^4.5.1"
   },

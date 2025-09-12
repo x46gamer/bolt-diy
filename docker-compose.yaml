@@ -74,6 +74,7 @@ services:
       - /app/node_modules
     ports:
       - '5173:5173'
+
     command: pnpm run dev --host 0.0.0.0
     profiles: ['development', 'default']
 
@@ -81,6 +82,7 @@ services:
     image: ghcr.io/stackblitz-labs/bolt.diy:latest
     ports:
       - '5173:5173'
+
     environment:
       - NODE_ENV=production
       - COMPOSE_PROFILES=production
