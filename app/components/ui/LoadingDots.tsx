@@ -12,7 +12,7 @@ export const LoadingDots = memo(({ text }: LoadingDotsProps) => {
       setDotCount((prevDotCount) => (prevDotCount + 1) % 4);
     }, 500);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval as any);
   }, []);
 
   return (

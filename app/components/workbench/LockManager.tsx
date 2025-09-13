@@ -51,7 +51,7 @@ export function LockManager() {
     // Set up an interval to refresh the list periodically
     const intervalId = setInterval(loadLockedItems, 5000);
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId as any);
   }, []);
 
   // Filter and sort the locked items

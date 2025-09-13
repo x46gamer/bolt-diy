@@ -49,7 +49,7 @@ function CurrentDateTime() {
       setDateTime(new Date());
     }, 60000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(timer as any);
   }, []);
 
   return (

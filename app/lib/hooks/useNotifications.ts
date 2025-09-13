@@ -25,7 +25,7 @@ export const useNotifications = () => {
 
     const interval = setInterval(checkNotifications, 60 * 1000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval as any);
   }, [logs]); // Re-run when logs change
 
   const markAsRead = async (notificationId: string) => {

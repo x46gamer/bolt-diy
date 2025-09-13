@@ -107,7 +107,7 @@ export function useGitHubStats(
       }
     }, refreshInterval);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval as any);
   }, [refreshInterval, connection, isStale]);
 
   const loadCachedStats = useCallback(() => {

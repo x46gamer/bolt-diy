@@ -786,7 +786,7 @@ export class FilesStore {
       const isBinary = content instanceof Uint8Array;
 
       if (isBinary) {
-        await webcontainer.fs.writeFile(relativePath, Buffer.from(content));
+        await webcontainer.fs.writeFile(relativePath, Buffer.from(content) as any);
 
         const base64Content = Buffer.from(content).toString('base64');
         this.files.setKey(filePath, {

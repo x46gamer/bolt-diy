@@ -42,7 +42,7 @@ export const useConnectionStatus = () => {
 
     const interval = setInterval(checkStatus, 10 * 1000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval as any);
   }, [acknowledgedIssue]);
 
   const acknowledgeIssue = () => {

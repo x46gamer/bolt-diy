@@ -82,7 +82,7 @@ export class LocalModelHealthMonitor extends SimpleEventEmitter {
       await this.performHealthCheck(provider, baseUrl);
     }, checkInterval || this._defaultCheckInterval);
 
-    this._checkIntervals.set(key, interval);
+    this._checkIntervals.set(key, interval as any);
 
     // Perform initial health check
     this.performHealthCheck(provider, baseUrl);
