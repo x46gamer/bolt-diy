@@ -4,12 +4,6 @@
   "framework": "remix",
   "installCommand": "pnpm install",
   "devCommand": "pnpm dev",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/app/entry.vercel.tsx"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",

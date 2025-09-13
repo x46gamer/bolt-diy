@@ -1,6 +1,8 @@
 import type { AppLoadContext } from '@remix-run/node';
 import { RemixServer } from '@remix-run/react';
-import { renderToString } from 'react-dom/server';
+import pkg from 'react-dom/server';
+
+const { renderToString } = pkg;
 import { renderHeadToString } from 'remix-island';
 import { Head } from './root';
 import { themeStore } from '~/lib/stores/theme';
