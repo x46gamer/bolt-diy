@@ -4,11 +4,6 @@
   "framework": "remix",
   "installCommand": "pnpm install",
   "devCommand": "pnpm dev",
-  "functions": {
-    "app/entry.vercel.tsx": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/(.*)",
