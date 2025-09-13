@@ -1,9 +1,9 @@
 {
-  "buildCommand": "pnpm build:vercel",
+  "buildCommand": "pnpm build",
   "outputDirectory": "build/client",
   "framework": "remix",
   "installCommand": "pnpm install",
-  "devCommand": "pnpm dev:vercel",
+  "devCommand": "pnpm dev",
   "functions": {
     "app/entry.vercel.tsx": {
       "runtime": "nodejs20.x"
@@ -29,8 +29,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
